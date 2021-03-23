@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>这是一级标题</h1>
+  <ul type='circle'>
+    <li><a href="https://www.baidu.com">HomePage</a></li>
+    <li><a href="https://www.baidu.com">Blog</a></li>
+  </ul>
+  <h2>这是二级标题</h2>
+  <p>这是我的第一个 html 页面，这里有一个文字段落</p>
+  <p>
+    <strong>C</strong>ascading
+    <strong>S</strong>tyle
+    <strong>S</strong>heets
+  </p>
+  <div class="container">
+    <div class="text__wrapper">
+      <div class="test_font_family">测试 font-family</div>
+      <div class="test_font_size">
+        <div class="test_font_size_em">em: 我是相对是父视图</div>
+        <div class="test_font_size_rem">rem: 我是相对于根视图</div>
+      </div>
+      <div class="test_line_height">line-height</div>
+      <div class="test_text_decoration">text-decoration</div>
+      <div class="test_font_style">font-style</div>
+      <div class="test_font_weight">font-weight</div>
+      <div class="test_text_indent">text-indent text-indent text-indent text-indent text-indent text-indent text-indent
+        text-indent text-indent text-indent </div>
+      <div class="break__wrapper">
+        <div class="test_word_break">There is a soft wrap opportunity around every typographic character unit, including
+          around any punctuation character or preserved white spaces, or in the middle of words, disregarding any
+          prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character class
+          or mandated by the word-break property. The different wrapping opportunities must not be prioritized.
+          Hyphenation is not applied.</div>
+        <div class="test_overflow_wrap">There is a soft wrap opportunity around every typographic character unit,
+          including around any punctuation character or preserved white spaces, or in the middle of words, disregarding
+          any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character
+          class or mandated by the word-break property. The different wrapping opportunities must not be prioritized.
+          Hyphenation is not applied.</div>
+      </div>
+    </div>
+
+    <div class="flex__wrapper">
+      <div class="flex__wrapper_ab">
+        <div class="div_a">div-a</div>
+        <div class="div_b">div-b</div>
+      </div>
+      <div class="div_c">div-c</div>
+
+      <div class="flex__wrapper_float">
+        <div class="flex_float_item">1</div>
+        <div class="flex_float_item clear_2">2</div>
+        <div class="flex_float_item">3</div>
+        <div class="flex_float_item">4</div>
+        <div class="flex_float_item">5</div>
+        <div class="flex_float_item">6</div>
+        <div class="flex_float_item">7</div>
+        <div class="flex_float_item">8</div>
+        <div class="flex_float_item">9</div>
+      </div>  
+
+      <div class="margin__wrapper">
+        <div class="margin_Item margin_A">A</div>
+        <div class="margin_B margin_Item">B</div>
+        <div class="margin_C margin_Item">C</div>
+        <div class="margin_D margin_Item">D</div>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  h1 {
+    color: blue;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    color: yellow;
+    background: black;
+    text-decoration: underline;
+  }
+
+  img {
+    border: red solid 2px;
+  }
+
+  strong {
+    color: red;
+    background: orange;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .text__wrapper {
+    width: 500px;
+    background-color: cyan;
+    height: 500px;
+  }
+
+  .test_font_family {
+    font: italic 75%/125% "Comic Sans MS", cursive;
+  }
+
+  .test_font_size {
+    font-size: 20px;
+  }
+
+  .test_font_size_em {
+    font-size: 2em;
+  }
+
+  .test_font_size_rem {
+    font-size: 2rem;
+  }
+
+  .test_line_height {
+    line-height: 10;
+  }
+
+  .test_text_decoration {
+    text-decoration: underline red wavy;
+  }
+
+  .test_font_style {
+    font-style: italic;
+  }
+
+  .test_font_weight {
+    font-weight: 500;
+  }
+
+  .test_text_indent {
+    text-indent: 3em;
+  }
+
+  .break__wrapper {
+    background: plum;
+  }
+
+  .test_word_break {
+    word-break: break-all;
+    background: lawngreen;
+  }
+
+  .test_overflow_wrap {
+    overflow-wrap: break-word;
+  }
+
+  .flex__wrapper {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex__wrapper_ab {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div_a {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+
+  .div_b {
+    background-color: blue;
+    flex-grow: 1;
+  }
+
+  .div_c {
+    background: yellow;
+    height: 50px;
+  }
+
+  .flex__wrapper_float {
+    padding: 20px;
+    background-color: red;
+    border: black solid 2px;
+    overflow: hidden;
+  }
+
+  .flex_float_item {
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+  }
+
+  .clear_2:after {
+    content: "200B";
+    display: block;
+    height: 0;
+    clear: both;
+    background-color: olivedrab;
+  }
+
+  .margin__wrapper {
+    display: flex;
+    direction: rtl;
+  }
+
+  .margin_A {
+    background-color: darkcyan;
+  }
+
+  .margin_B {
+    background-color: bisque;
+  }
+
+  .margin_C {
+    background: orange;
+  }
+
+  .margin_D {
+    background-color: blue;
+  }
+
+  .margin_Item {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    margin-right: -15px;
+  }
+
+</style>
+
+</html>
