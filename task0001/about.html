@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <span class="circle"></span>
+      <span class="line"></span>
+      <span class="title">name</span>
+      <span
+        class="content">这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍这是一段自我介绍</span>
+    </li>
+    <li>
+      <span class="circle"></span>
+      <span class="line"></span>
+      <span class="title">联系方式</span>
+      <span class="content">
+        联系方式1: xxxxxxxxxxx <br>
+        联系方式2: xxxxxxxxxx <br>
+        联系方式3: xxxxxxxxxxx
+      </span>
+    </li>
+    <li>
+      <span class="circle"></span>
+      <span class="line"></span>
+      <span class="year_2008 center">2008</span>
+      <span class="year_2011 center">2011</span>
+      <span class="year_2015 center">2015</span>
+      <span class="title">联系方式</span>
+      <span class="content">
+      </span>
+    </li>
+  </ul>
+</body>
+
+</html>
+
+<style>
+  body {
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  ul {
+    margin-top: 100px;
+  }
+
+  li {
+    background-color: white;
+    height: 200px;
+    position: relative;
+    list-style: none;
+  }
+
+  .circle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  .line {
+    position: absolute;
+    width: 4px;
+    background-color: #f0f0f0;
+    height: 100%;
+    left: 50%;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-100%, 80px);
+  }
+
+  .content {
+    position: absolute;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(30px, 80px);
+    width: 30%;
+  }
+
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+    background-color: white;
+    border: #f0f0f0 solid 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  .center:nth-child(3) {
+    top: 150px;
+  }
+
+  .center:nth-child(4) {
+    top: 200px;
+  }
+
+  .content:first-child {
+    text-indent: 20px;
+  }
+</style>
