@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+
+<body>
+  <h3>使用nth-child()指定元素</h3>
+  <div class="nth_child__wrapper">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+  </div>
+  <h3>使用writing-mode排版竖文</h3>
+  <div class="witing_mode_div">
+    <div>锄禾日当午</div>
+    <div>汗滴禾下土</div>
+    <div>谁知盘中餐</div>
+    <div>料料皆辛苦</div>
+  </div>
+  <h3>两端对齐</h3>
+  <div class="wrapper__3">
+    <div>账号</div>
+    <div>密码</div>
+    <div>电子邮件</div>
+    <div>通讯地址</div>
+  </div>
+  <h3>使用object-fit规定图像尺寸</h3>
+  <div class="wrapper__4">
+    <img class="cover" src="https://static.yangzw.vip/codepen/ab-1.jpg">
+    <img class="cover" src="https://static.yangzw.vip/codepen/ab-1.jpg">
+    <img class="cover" src="https://static.yangzw.vip/codepen/ab-1.jpg">
+    <img class="cover" src="https://static.yangzw.vip/codepen/ab-1.jpg">
+  </div>
+  <h3>使用overflow-x排版横向列表</h3>
+  <div class="wrapper__5">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+  </div>
+  <h3>使用text-overflow控制文本溢出</h3>
+  <div class="wrapper__6">
+    <div>CSS非常有趣和搞怪，可以做一些JS也能做的事情</div>
+    <div>层叠样式表(CSS)是一种用来表现HTML(标准通用标记语言的一个应用)或XML(标准通用标记语言的一个子集)等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。
+    </div>
+    <div>层叠样式表(CSS)是一种用来表现HTML(标准通用标记语言的一个应用)或XML(标准通用标记语言的一个子集)等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。
+    </div>
+  </div>
+  </div>
+  <h3>通过margin-left排版左重右轻列表</h3>
+  <div class="wrapper__7">
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+    <span>E</span>
+  </div>
+  <h3>使用animation-delay</h3>
+  <div class="wrapper__8">
+    <ul class="initial-keyframe">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <h3>使用 color 改变边框颜色</h3>
+  <div class="wrapper__9">搜索掘金</div>
+  <h3>使用 linear-gradient 控制背景激变</h3>
+  <div class="wrapper__10">iCSS</div>
+  <h3>使用linear-gradient控制文本渐变</h3>
+  <div class="wrapper__11">background-clipbackground-clip</div>
+  <h3>使用caret-color改变光标颜色</h3>
+  <input class="wrapper__12" type="text">
+  <h3>使用filter模拟Instagram滤镜</h3>
+  <div>...</div>
+  <h3></h3>
+  <h3>使用linear-gradient描绘波浪线</h3>
+  <div class="wrapper__13">波浪线文字</div>
+  <h3>使用linear-gradient描绘彩带</h3>
+  <div class="wrapper__14"></div>
+  <h3>使用conic-gradient描绘饼图</h3>
+  <div class="wrapper__15"></div>
+  <h3>使用filter描绘头像彩色阴影</h3>
+  <div class="avatar-shadow"></div>
+  <h3>加载指示器</h3>
+  <div class="wrapper__16">加载中<span></span></div>
+  </div>
+</body>
+
+</html>
+
+<style>
+  .nth_child__wrapper span {
+    padding: 10px 20px;
+    color: white;
+    background-color: orange;
+  }
+
+  .nth_child__wrapper span:first-child {
+    background-color: red;
+  }
+
+  .nth_child__wrapper span:nth-child(-n+2) {
+    color: blue;
+  }
+
+  .witing_mode_div {
+    writing-mode: vertical-rl;
+  }
+
+  .wrapper__3 {
+    width: 100px;
+
+    text-align-last: justify;
+    color: white;
+  }
+
+  .wrapper__3 div {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: brown;
+  }
+
+  .wrapper__4 img {
+    width: 100px;
+    height: 200px;
+    background-color: red;
+  }
+
+  .wrapper__4 img:first-child {
+    object-fit: cover;
+  }
+
+  .wrapper__4 img:nth-child(2) {
+    object-fit: contain;
+  }
+
+  .wrapper__4 img:nth-child(3) {
+    object-fit: fill;
+  }
+
+  .wrapper__4 img:nth-child(4) {
+    object-fit: scale-down;
+  }
+
+  .wrapper__5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 375px;
+    height: 100px;
+    overflow-x: hidden;
+  }
+
+  .wrapper__5 ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .wrapper__5 ul li {
+    background-color: blue;
+    color: white;
+    width: 200px;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+
+  .wrapper__6 {
+    width: 300px;
+  }
+
+  .wrapper__6 div {
+    margin-bottom: 10px;
+  }
+
+  .wrapper__6 div:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: cyan;
+  }
+
+  .wrapper__6 div:nth-child(2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    background-color: aquamarine;
+  }
+
+  .wrapper__6 div:last-child {
+    overflow: hidden;
+    position: relative;
+    max-height: 90px;
+    background-color: rebeccapurple;
+  }
+
+  .wrapper__6 div:last-child::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .wrapper__7 {
+    /* display: flex; */
+    width: 500px;
+    background-color: antiquewhite;
+  }
+
+  .wrapper__7 span {
+    display: inline-block;
+    padding: 10px 20px;
+    height: 50px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 10px;
+  }
+
+  .wrapper__7 span:last-child {
+    /* margin-left: auto; */
+    float: right;
+  }
+
+  .wrapper__8 {}
+
+  .initial-keyframe {
+    list-style: none;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .initial-keyframe li {
+    position: absolute;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #3c9;
+    transform: rotate(0) translate(-80px, 0);
+    animation: rotate 3s linear infinite;
+  }
+
+  .initial-keyframe li:nth-child(2) {
+    animation-delay: -1s;
+  }
+
+  .initial-keyframe li:nth-child(3) {
+    animation-delay: -2s;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn) translate(-80px, 0);
+    }
+  }
+
+  .wrapper__9 {
+    display: inline-block;
+    border: 1px solid;
+    color: #f66;
+  }
+
+  .wrapper__10 {
+    font-size: 50px;
+    padding: 50px 100px;
+    color: white;
+    background: linear-gradient(135deg, #f66, #f90, #3c9, #09f, #66f) left center/400% 400%;
+    animation: gradient 10s infinite;
+  }
+
+  .wrapper__11 {
+    color: transparent;
+    background-image: linear-gradient(135deg, #f66, #f90, #3c9, #09f, #66f) left center/400% 400%;
+    -webkit-background-clip: text;
+  }
+
+  .wrapper__12 {
+    caret-color: red;
+  }
+
+  @keyframes gradient {
+
+    0%,
+    100% {
+      background-position: left;
+    }
+
+    50% {
+      background-position: right;
+    }
+  }
+
+  .wrapper__13 {
+    background-image: linear-gradient();
+  }
+
+  .wrapper__14 {
+    width: 500px;
+    height: 50px;
+    background-image: repeating-linear-gradient(90deg, #f66, #f66, 50px, #66f, 50px, #66f 100px);
+  }
+
+  .wrapper__15 {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    background-image: conic-gradient(#f66 0 25%, #66f 25% 30%, #f90 30% 55%, #09f 55% 70%, #3c9 70% 100%);
+  }
+
+  .avatar-shadow {
+    position: relative;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    background: url('https://static.yangzw.vip/codepen/thor.jpg') no-repeat center/cover;
+  }
+
+  .avatar-shadow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    z-index: -1;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: scale(0.95);
+    filter: blur(10px) brightness(80%) opacity(0.8);
+  }
+
+  .wrapper__16 {
+    font-size: 16px;
+    color: #09f;
+  }
+
+  .wrapper__16 span {
+    display: inline-block;
+    overflow: hidden;
+    height: 1em;
+    line-height: 1;
+    vertical-align: -.25em;
+  }
+
+  .wrapper__16 span::after {
+    display: block;
+    white-space: pre-wrap;
+    content: '...\A..\A.';
+    animation: loading 1s infinite step-start both;
+  }
+
+  @keyframes loading {
+    33% {
+      transform: translate3d(0, -2em, 0);
+    }
+
+    66% {
+      transform: translate3d(0, -1em, 0);
+    }
+  }
+</style>
